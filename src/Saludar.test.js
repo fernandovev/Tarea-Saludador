@@ -1,4 +1,4 @@
-import { saludar, saludarPorNombre, saludarSegunHora, saludarPorGenero } from "./Saludar.js";
+import { saludar, saludarPorNombre, saludarSegunHora, saludarPorGenero, saludarPorEdad } from "./Saludar.js";
 
 describe("Saludar", () => {
     it("Debería saludar la página con 'Hola'", () => {
@@ -31,5 +31,13 @@ describe("Saludar", () => {
     
     it("Debería saludar sin género definido", () => {
         expect(saludarPorGenero("Alex", "")).toBe("Hola, Alex!");
+    });
+
+    it("Debería saludar con señor o señora si tiene arriba de 30 años", () => {
+        expect(saludarPorEdad("Alex", "M", 35)).toBe("Hola, Sr. Alex!");
+    });
+
+    it("Debería saludar con señor o señora si tiene arriba de 30 años", () => {
+        expect(saludarPorEdad("Alex", "F", 10)).toBe("Hola, jovencita Alex!");
     });
 });

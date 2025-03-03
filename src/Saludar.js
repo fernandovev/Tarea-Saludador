@@ -27,3 +27,26 @@ export function saludarPorGenero(nombre, genero) {
   
     return titulo ? `Hola, ${titulo} ${nombre}!` : `Hola, ${nombre}!`;
 }
+
+export function saludarPorEdad(nombre, genero, edad){
+    let titulo = "";
+    
+    if(edad > 30)
+    {
+        if (genero === "M") {
+            titulo = "Sr.";
+          } else if (genero === "F") {
+            titulo = "Sra.";
+          }
+    }
+    else
+    {
+        if (genero === "M") {
+            titulo = "jovencito";
+          } else if (genero === "F") {
+            titulo = "jovencita";
+          }
+    }
+  
+    return titulo ? `Hola, ${titulo} ${nombre}!` : `Hola, ${nombre}!`;
+}
