@@ -10,16 +10,17 @@ describe("Saludar", () => {
     });
 
     it("Debería decir 'Buenos días' antes de las 12pm", () => {
-        expect(saludarSegunHora(8)).toBe("Buenos días");
+        expect(saludarSegunHora(8, "Esp")).toBe("Buenos días");
     });
-
+    
     it("Debería decir 'Buenas tardes' entre las 12pm y 6pm", () => {
-        expect(saludarSegunHora(14)).toBe("Buenas tardes");
+        expect(saludarSegunHora(14, "Esp")).toBe("Buenas tardes");
     });
-
+    
     it("Debería decir 'Buenas noches' después de las 6pm", () => {
-        expect(saludarSegunHora(20)).toBe("Buenas noches");
+        expect(saludarSegunHora(20, "Esp")).toBe("Buenas noches");
     });
+    
 
     it("Debería saludar con género masculino", () => {
         expect(saludarPorGenero("Carlos", "M")).toBe("Hola, Sr. Carlos!");
